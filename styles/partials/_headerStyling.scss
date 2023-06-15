@@ -1,0 +1,104 @@
+@use "./variables" as *;
+
+header {
+    background-image: url(../assets/viktor-forgacs-3PyBkxgTiL0-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    .header-nav {
+            background-color: $deepBlue;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            align-items: center;
+            padding: 1rem 0;
+            width: 100%;
+            border-bottom: $cleanWhite 5px solid;
+            position: fixed;
+            z-index: 100;
+
+            li {
+                padding: 0 1.25rem;
+            };
+            
+            a {
+                color: $cleanWhite;
+                position: relative;
+                transition: 0.2s ease-out;
+            }
+
+            // a::before {
+            //     content: '';
+            //     position: absolute;
+            //     width: 0%;
+            //     height: 2px;
+            //     background-color: $richGold;
+            //     bottom: -2px;
+            //     left: 50%;
+            //     transform: translateX(-50%);
+            //     transition: width 0.3s ease-in-out;
+            // }
+
+            a:hover {
+                color: $richGold;
+            }
+
+            // a:hover::before {
+            //     width: 100%;
+            // }
+        }
+
+        .header-hero-section{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: $cleanWhite;
+            background-color: rgb(112, 112, 112, 0.3);
+            width: 100%;
+
+            .header-text {
+                width: 75%;
+                padding: 1rem;
+
+                .company-name,
+                .psychology {
+                    font-weight: 800;
+                    font-size: 3rem;
+                }
+
+                .company-name {
+                    color: $richGold;
+                    background-color: $deepBlue;
+                }
+
+                .psychology {
+                    color: $deepBlue;
+                    background-color: $richGold;
+                }
+
+                h1,
+                h2,
+                p {
+                    padding: 1rem;
+                }
+            }
+            .hero-section {
+                width: 30%;
+
+                .img-container {
+                    width: 50%;
+
+                    img {
+                        object-fit: cover;
+                    }
+                    
+                }
+            }
+
+        }
+
+
+}
