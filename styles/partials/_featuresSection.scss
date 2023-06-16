@@ -1,0 +1,45 @@
+@use "./variables" as *;
+
+.features {
+    background-color: $cleanWhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    height: 90vh;
+
+    .feature-container {
+        background-color: rgb(112, 112, 112, 0.5);
+        position: relative;
+        border-radius: 10px;
+
+        h3 {
+            position: absolute;
+            bottom: 1rem;
+            font-size: 2rem;
+            width: 50%;
+            margin-left: 1rem;
+        }
+
+        p {
+            display: none;
+            position: absolute;
+            bottom: -15%;
+        }
+    }
+
+    .psych-assessments,
+    .personalized-strategies {
+        width: 49%;
+        height: 40vh;
+    }
+    .psych-assessments {
+        margin-right: 1rem;
+    }
+
+    .risk-management-techniques {
+        margin-top: -1rem;
+        width: 100%;
+        height: 40vh;
+    }
+}
