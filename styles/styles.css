@@ -225,3 +225,122 @@ template {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+html {
+  font-size: 125%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+h2 {
+  font-weight: 300;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+a,
+button,
+input,
+p {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  background-image: url(../assets/viktor-forgacs-3PyBkxgTiL0-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+header .header-nav {
+  background-color: #002a5c;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  align-items: center;
+  padding: 1rem 0;
+  width: 100%;
+  border-bottom: #fff 5px solid;
+  position: fixed;
+  z-index: 100;
+}
+header .header-nav li {
+  padding: 0 1.25rem;
+}
+header .header-nav a {
+  color: #fff;
+  position: relative;
+  transition: 0.2s ease-out;
+}
+header .header-nav a:hover {
+  color: #ffc72c;
+}
+header .header-hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #fff;
+  background-color: rgba(112, 112, 112, 0.3);
+  width: 100%;
+}
+header .header-hero-section .header-text {
+  width: 75%;
+  padding: 1rem;
+}
+header .header-hero-section .header-text .company-name {
+  font-weight: 800;
+  font-size: 3rem;
+}
+header .header-hero-section .header-text .psych {
+  color: #ffc72c;
+  background-color: #002a5c;
+}
+header .header-hero-section .header-text .trade {
+  color: #002a5c;
+  background-color: #ffc72c;
+}
+header .header-hero-section .header-text h1,
+header .header-hero-section .header-text h2,
+header .header-hero-section .header-text p {
+  padding: 1rem;
+}
