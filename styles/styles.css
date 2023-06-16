@@ -327,16 +327,15 @@ header .header-hero-section .header-text {
   width: 75%;
   padding: 1rem;
 }
-header .header-hero-section .header-text .company-name,
-header .header-hero-section .header-text .psychology {
+header .header-hero-section .header-text .company-name {
   font-weight: 800;
   font-size: 3rem;
 }
-header .header-hero-section .header-text .company-name {
+header .header-hero-section .header-text .psych {
   color: #ffc72c;
   background-color: #002a5c;
 }
-header .header-hero-section .header-text .psychology {
+header .header-hero-section .header-text .trade {
   color: #002a5c;
   background-color: #ffc72c;
 }
@@ -344,14 +343,4 @@ header .header-hero-section .header-text h1,
 header .header-hero-section .header-text h2,
 header .header-hero-section .header-text p {
   padding: 1rem;
-}
-header .header-hero-section .hero-section {
-  width: 30%;
-}
-header .header-hero-section .hero-section .img-container {
-  width: 50%;
-}
-header .header-hero-section .hero-section .img-container img {
-  -o-object-fit: cover;
-     object-fit: cover;
 }

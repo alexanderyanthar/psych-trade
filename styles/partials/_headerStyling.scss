@@ -29,25 +29,9 @@ header {
                 transition: 0.2s ease-out;
             }
 
-            // a::before {
-            //     content: '';
-            //     position: absolute;
-            //     width: 0%;
-            //     height: 2px;
-            //     background-color: $richGold;
-            //     bottom: -2px;
-            //     left: 50%;
-            //     transform: translateX(-50%);
-            //     transition: width 0.3s ease-in-out;
-            // }
-
             a:hover {
                 color: $richGold;
             }
-
-            // a:hover::before {
-            //     width: 100%;
-            // }
         }
 
         .header-hero-section{
@@ -63,18 +47,17 @@ header {
                 width: 75%;
                 padding: 1rem;
 
-                .company-name,
-                .psychology {
+                .company-name {
                     font-weight: 800;
                     font-size: 3rem;
                 }
 
-                .company-name {
+                .psych {
                     color: $richGold;
                     background-color: $deepBlue;
                 }
 
-                .psychology {
+                .trade {
                     color: $deepBlue;
                     background-color: $richGold;
                 }
@@ -83,18 +66,6 @@ header {
                 h2,
                 p {
                     padding: 1rem;
-                }
-            }
-            .hero-section {
-                width: 30%;
-
-                .img-container {
-                    width: 50%;
-
-                    img {
-                        object-fit: cover;
-                    }
-                    
                 }
             }
 
