@@ -363,18 +363,35 @@ header .header-hero-section .header-text p {
   background-color: rgba(112, 112, 112, 0.5);
   position: relative;
   border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .features .feature-container h3 {
   position: absolute;
-  bottom: 1rem;
+  bottom: 10%;
   font-size: 2rem;
   width: 50%;
   margin-left: 1rem;
+  transition: bottom 0.3s ease;
 }
-.features .feature-container p {
-  display: none;
+.features .feature-container .feature-description {
   position: absolute;
-  bottom: -15%;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: top 0.3s, opacity 0.3s;
+  padding-left: 1rem;
+}
+.features .feature-container.active {
+  background-color: #002a5c;
+  color: rgba(255, 199, 44, 0.8);
+}
+.features .feature-container.active h3 {
+  bottom: 40%;
+}
+.features .feature-container.active .feature-description {
+  top: 70%;
+  opacity: 1;
 }
 .features .psych-assessments,
 .features .personalized-strategies {
