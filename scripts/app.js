@@ -9,3 +9,14 @@ featureContainer.forEach((container) => {
         console.log(e.target);
     })
 })
+
+const backgroundCover = document.querySelectorAll('.background-cover');
+
+backgroundCover.forEach((cover) => {
+    cover.addEventListener('mouseover', () => {
+        cover.classList.add('active');
+    })
+    cover.addEventListener('mouseout', () => {
+        cover.classList.remove('active');
+    })
+})
