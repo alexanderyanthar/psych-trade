@@ -437,8 +437,13 @@ header .header-hero-section .header-text p {
 
 .how-it-works {
   height: 100vh;
+  background-color: #707070;
 }
 
 .how-it-works .how-it-works-header {
+  text-align: center;
+}
+
+.how-it-works .carousel .carousel-inner .carousel-item {
   text-align: center;
 }
