@@ -20,3 +20,4 @@ backgroundCover.forEach((cover) => {
         cover.classList.remove('active');
     })
 })
+

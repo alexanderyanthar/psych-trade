@@ -267,6 +267,7 @@ img {
 a,
 button,
 input,
+li,
 p {
   font-family: "Roboto", sans-serif;
   padding: 0;
@@ -432,4 +433,12 @@ header .header-hero-section .header-text p {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.how-it-works {
+  height: 100vh;
+}
+
+.how-it-works .how-it-works-header {
+  text-align: center;
 }
