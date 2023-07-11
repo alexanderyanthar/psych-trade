@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Roboto:wght@300;500&display=swap"
         rel="stylesheet">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
@@ -35,39 +38,88 @@
     </header>
 
     <main>
-        <section id="features">
+        <section class="wrapper features" id="features">
             <!-- Outline key features of platform emphasizing use of psychological tests and personalized analysis -->
             <!-- Make three divs to showcase each feature -->
-            <div class="psych-assessments">
-                <h3>Psychological Assessments</h3>
-                <p>Gain deep insights into your trading personality with our scientifically designed tests.</p>
+            <div class="psych-assessments feature-container">
+                <div class="background-cover">
+                    <h3>Psychological Assessments</h3>
+                    <p class="feature-description">Gain deep insights into your trading personality with our scientifically designed tests.</p>
+                </div>
             </div>
-            <div class="personalized-strategies">
-                <h3>Personalized Strategies</h3>
-                <p>Get tailored recommendations based on your psychological profile and trading goals.</p>
+            <div class="personalized-strategies feature-container">
+                <div class="background-cover">
+                    <h3>Personalized Strategies</h3>
+                    <p class="feature-description">Get tailored recommendations based on your psychological profile and trading goals.</p>
+                </div>
             </div>
-            <div class="risk-management-techniques">
-                <h3>Risk Management Techniques</h3>
-                <p>Learn effective strategies to handle stress, emotions, and maintain discipline in your trades.</p>
+            <div class="risk-management-techniques feature-container">
+                <div class="background-cover">
+                    <h3>Risk Management Techniques</h3>
+                    <p class="feature-description">Learn effective strategies to handle stress, emotions, and maintain discipline in your trades.</p>
+                </div>
             </div>
         </section>
-        <section id="how-it-works">
-            <!-- Make this into steps -->
-            <ol>
-                <li>
-                    <h3>Take the Assessment</h3>
-                    <p>Complete our comprehensive psychological assessment to identify your strengths and weaknesses as a trader.</p>
-                </li>
-                <li>
-                    <h3>Analysis and Recommendations</h3>
-                    <p>Our advanced algorithms analyze your results to provide personalized trading strategies that align with your
-                    personality.</p>
-                </li>
-                <li>
-                    <h3>Empower Your Trading</h3>
-                    <p>Implement the recommended strategies, refine your skills, and watch your trading performance soar.</p>
-                </li>
-            </ol>
+        <section class="how-it-works" id="how-it-works">
+            <div id="carouselExampleIndicators" class="carousel slide full-height">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner full-height">
+                    <div class="carousel-item active full-height carousel-item-1">
+                        <div class="background-filter">
+                            <div class="carousel-slide-title half-height">
+                                <h3>Take the Assessment</h3>
+                            </div>
+                            <div class="carousel-slide-text half-height">
+                                <p>Complete our comprehensive psychological assessment to identify your strengths and weaknesses as a
+                                    trader. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item full-height carousel-item-2">
+                        <div class="background-filter">
+                            <div class="carousel-slide-title half-height">
+                                <h3>Analysis and Recommendations</h3>
+                            </div>
+                            <div class="carousel-slide-text half-height">
+                                <p class="carousel-slide-text">Our advanced algorithms analyze your results to provide personalized trading strategies that align
+                                    with
+                                    your
+                                    personality.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item full-height carousel-item-3">
+                        <div class="background-filter">
+                            <div class="carousel-slide-title half-height">
+                                <h3 class="carousel-slide-title">Empower Your Trading</h3>
+                            </div>
+                            <div class="carousel-slide-text half-height">
+                                <p>Implement the recommended strategies,
+                                    refine your skills,
+                                    and watch your trading performance soar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon text-primary-emphasis" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        
         </section>
         <section id="testimonials">
             <!-- display testimonials with a carousel - maybe make it automatic -->
@@ -131,6 +183,11 @@
                     <li><a href="#">Using Hopscotch</a></li>
                 </ul>
             </div>
+            <div class="attributes">
+                <a href="https://storyset.com/data">Data illustrations by Storyset</a>
+                <a href="https://storyset.com/education">Education illustrations by Storyset</a>
+                <a href="https://storyset.com/data">Data illustrations by Storyset</a>
+            </div>
         </div>
         <div>
             <!-- To hold copyright and terms of service stuff -->
@@ -144,5 +201,9 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="./scripts/app.js"></script>
 </body>
 </html>

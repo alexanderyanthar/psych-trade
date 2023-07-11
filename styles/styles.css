@@ -267,6 +267,7 @@ img {
 a,
 button,
 input,
+li,
 p {
   font-family: "Roboto", sans-serif;
   padding: 0;
@@ -333,14 +334,178 @@ header .header-hero-section .header-text .company-name {
 }
 header .header-hero-section .header-text .psych {
   color: #ffc72c;
-  background-color: #002a5c;
+  transition: background-color 0.5s ease;
 }
 header .header-hero-section .header-text .trade {
   color: #002a5c;
-  background-color: #ffc72c;
+  transition: background-color 0.7s ease;
+}
+header .header-hero-section .header-text .psych:hover {
+  background-color: rgba(0, 42, 92, 0.7);
+}
+header .header-hero-section .header-text .trade:hover {
+  background-color: rgba(255, 199, 44, 0.7);
 }
 header .header-hero-section .header-text h1,
 header .header-hero-section .header-text h2,
 header .header-hero-section .header-text p {
   padding: 1rem;
+}
+
+.features {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  height: 90vh;
+}
+.features .feature-container {
+  background-color: rgba(112, 112, 112, 0.5);
+  position: relative;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.features .feature-container h3 {
+  position: absolute;
+  bottom: 10%;
+  font-size: 2rem;
+  width: 50%;
+  margin-left: 1rem;
+  transition: bottom 0.3s ease;
+}
+.features .feature-container .feature-description {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: top 0.3s, opacity 0.3s;
+  padding: 0 1rem;
+}
+.features .feature-container.active {
+  background-color: #002a5c;
+  color: rgba(255, 199, 44, 0.8);
+}
+.features .feature-container.active h3 {
+  bottom: 40%;
+}
+.features .feature-container.active .feature-description {
+  top: 70%;
+  opacity: 1;
+}
+.features .psych-assessments .background-cover.active,
+.features .risk-management-techniques .background-cover.active,
+.features .personalized-strategies .background-cover.active {
+  background-color: rgba(0, 42, 92, 0.9);
+}
+.features .psych-assessments,
+.features .personalized-strategies {
+  width: 49%;
+  height: 40vh;
+}
+.features .personalized-strategies {
+  background-image: url("../assets/personalized-strategies.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.features .psych-assessments {
+  margin-right: 1rem;
+  background-image: url("../assets/psych-assessments.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.features .psych-assessments .background-cover,
+.features .risk-management-techniques .background-cover,
+.features .personalized-strategies .background-cover {
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgba(112, 112, 112, 0.3);
+  transition: background-color 0.3s ease;
+}
+.features .risk-management-techniques {
+  margin-top: -1rem;
+  width: 100%;
+  height: 40vh;
+  background-image: url("../assets/risk-management-techniques.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.how-it-works {
+  height: 90vh;
+  background-color: #707070;
+}
+
+.how-it-works .how-it-works-header {
+  text-align: center;
+}
+
+.how-it-works .full-height {
+  height: 100%;
+}
+
+.how-it-works .half-height {
+  height: 50%;
+}
+
+.how-it-works .carousel .carousel-inner::after {
+  text-align: center;
+  background-color: rgba(112, 112, 112, 0.8);
+  z-index: 1;
+}
+
+.how-it-works .carousel .carousel-inner .carousel-item-1 {
+  background-image: url("../../assets/take-the-assessment-blue.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.how-it-works .carousel .carousel-inner .carousel-item-2 {
+  background-image: url("../../assets/analysis-and-recommendations-blue.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.how-it-works .carousel .carousel-inner .carousel-item-3 {
+  background-image: url("../assets/empower-your-trading-blue.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.how-it-works .carousel .carousel-inner .carousel-item .background-filter {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.how-it-works .carousel .carousel-inner .carousel-item .carousel-slide-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.how-it-works .carousel .carousel-inner .carousel-item .carousel-slide-title h3 {
+  position: absolute;
+  top: 40%;
+}
+
+.how-it-works .carousel .carousel-inner .carousel-item .carousel-slide-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.how-it-works .carousel .carousel-inner .carousel-item .carousel-slide-text p {
+  position: absolute;
+  bottom: 40%;
+}
+
+.how-it-works .carousel-control-next .carousel-control-next-icon {
+  color: #ffc72c;
 }

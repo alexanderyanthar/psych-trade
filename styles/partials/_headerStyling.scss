@@ -54,12 +54,22 @@ header {
 
                 .psych {
                     color: $richGold;
-                    background-color: $deepBlue;
+                    transition: background-color 0.5s ease;
+                    // background-color: $deepBlue;
                 }
 
                 .trade {
                     color: $deepBlue;
-                    background-color: $richGold;
+                    transition: background-color 0.7s ease;
+                    // background-color: $richGold;
+                }
+
+                .psych:hover {
+                    background-color: rgb(0, 42, 92, 0.7);
+                }
+
+                .trade:hover {
+                    background-color: rgb(255, 199, 44, 0.7);
                 }
 
                 h1,
