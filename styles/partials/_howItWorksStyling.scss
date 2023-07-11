@@ -9,9 +9,45 @@
     text-align: center;
 }
 
+.how-it-works .full-height {
+    height: 100%;
+}
+
+.how-it-works .half-height {
+    height: 50%;
+}
+
 .how-it-works .carousel .carousel-inner .carousel-item {
     text-align: center;
+    // color: $richGold;
 }
+
+
+.how-it-works .carousel .carousel-inner .carousel-item .carousel-slide-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    h3 {
+        position: absolute;
+        top: 40%;
+    }
+}
+
+.how-it-works .carousel .carousel-inner .carousel-item .carousel-slide-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    p {
+        position: absolute;
+        bottom: 40%;
+    }
+}
+
+
 
 
 

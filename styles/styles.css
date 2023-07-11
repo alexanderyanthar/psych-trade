@@ -444,6 +444,36 @@ header .header-hero-section .header-text p {
   text-align: center;
 }
 
+.how-it-works .full-height {
+  height: 100%;
+}
+
+.how-it-works .half-height {
+  height: 50%;
+}
+
 .how-it-works .carousel .carousel-inner .carousel-item {
   text-align: center;
+}
+
+.how-it-works .carousel .carousel-inner .carousel-item .carousel-slide-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.how-it-works .carousel .carousel-inner .carousel-item .carousel-slide-title h3 {
+  position: absolute;
+  top: 40%;
+}
+
+.how-it-works .carousel .carousel-inner .carousel-item .carousel-slide-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.how-it-works .carousel .carousel-inner .carousel-item .carousel-slide-text p {
+  position: absolute;
+  bottom: 40%;
 }
