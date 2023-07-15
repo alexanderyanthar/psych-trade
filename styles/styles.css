@@ -509,3 +509,41 @@ header .header-hero-section .header-text p {
 .how-it-works .carousel-control-next .carousel-control-next-icon {
   color: #ffc72c;
 }
+
+.call-to-action {
+  background-color: #002a5c;
+}
+
+.call-to-action .wrapper {
+  height: 30vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.call-to-action .wrapper h3 {
+  font-weight: 800;
+  color: #ffc72c;
+}
+
+.call-to-action .wrapper .call-to-action-form-container {
+  display: flex;
+}
+.call-to-action .wrapper .call-to-action-form-container .email,
+.call-to-action .wrapper .call-to-action-form-container .password {
+  font-size: 0.75rem;
+  margin: 0 0.5rem;
+  padding: 0.5rem 0.25rem;
+}
+.call-to-action .wrapper .call-to-action-form-container .email {
+  width: 50%;
+}
+.call-to-action .wrapper .call-to-action-form-container .password {
+  width: 35%;
+}
+.call-to-action .wrapper .call-to-action-form-container .submit-btn {
+  width: 25%;
+  border-style: none;
+  background-color: #ffc72c;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
