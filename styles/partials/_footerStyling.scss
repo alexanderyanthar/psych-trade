@@ -1,0 +1,13 @@
+@use "./variables" as *;
+
+footer {
+    height: 80vh;
+}
+
+footer .wrapper {
+    display: flex;
+
+    .footer-nav-container {
+        display: flex;
+    }
+}

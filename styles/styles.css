@@ -547,3 +547,14 @@ header .header-hero-section .header-text p {
   border-radius: 5px;
   transition: background-color 0.2s ease;
 }
+
+footer {
+  height: 80vh;
+}
+
+footer .wrapper {
+  display: flex;
+}
+footer .wrapper .footer-nav-container {
+  display: flex;
+}
