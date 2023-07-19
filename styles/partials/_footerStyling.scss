@@ -1,13 +1,89 @@
 @use "./variables" as *;
 
 footer {
-    height: 80vh;
+    height: 40vh;
 }
 
 footer .wrapper {
+    height: 100%;
+}
+
+footer .wrapper .site-footer-container {
     display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    height: 80%;
 
     .footer-nav-container {
         display: flex;
+        justify-content: space-between;
+        // align-items: center;
+        width: 70%;
+        
+        ul {
+            list-style: none;
+
+            li a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+
+    .logo-icon-container {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        width: 25%;
+
+        .logo {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .logo-icon-container .icon-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        width: 100%;
+
+        li a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
+footer .wrapper .legal-footer-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 5px solid $deepBlue;
+
+    .copyright {
+        width: 25%;
+        font-weight: 100;
+    }
+
+    .legal {
+        width: 100%;
+    }
+
+    .legal .legal-list {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+
+        li {
+            padding: 0 1rem;
+        }
+
+        li a {
+            text-decoration: none;
+            color: black;
+        }
     }
 }
