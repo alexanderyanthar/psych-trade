@@ -549,7 +549,10 @@ header .header-hero-section .header-text p {
 }
 
 footer {
-  height: 40vh;
+  height: 45vh;
+  background-color: #002a5c;
+  border-top: 10px solid #fff;
+  color: #ffc72c;
 }
 
 footer .wrapper {
@@ -560,18 +563,33 @@ footer .wrapper .site-footer-container {
   display: flex;
   justify-content: space-between;
   height: 80%;
+  padding-top: 2rem;
 }
 footer .wrapper .site-footer-container .footer-nav-container {
   display: flex;
   justify-content: space-between;
   width: 70%;
 }
+footer .wrapper .site-footer-container .footer-nav-container .company,
+footer .wrapper .site-footer-container .footer-nav-container .resources,
+footer .wrapper .site-footer-container .footer-nav-container .attributes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer .wrapper .site-footer-container .footer-nav-container .company,
+footer .wrapper .site-footer-container .footer-nav-container .resources {
+  height: 75%;
+}
+footer .wrapper .site-footer-container .footer-nav-container .attributes {
+  height: 62%;
+}
 footer .wrapper .site-footer-container .footer-nav-container ul {
   list-style: none;
 }
 footer .wrapper .site-footer-container .footer-nav-container ul li a {
   text-decoration: none;
-  color: black;
+  color: #fff;
 }
 footer .wrapper .site-footer-container .logo-icon-container {
   display: flex;
@@ -590,7 +608,7 @@ footer .wrapper .site-footer-container .logo-icon-container .icon-list {
 }
 footer .wrapper .site-footer-container .logo-icon-container .icon-list li a {
   text-decoration: none;
-  color: black;
+  color: #fff;
 }
 
 footer .wrapper .legal-footer-container {
@@ -598,7 +616,7 @@ footer .wrapper .legal-footer-container {
   width: 100%;
   justify-content: space-around;
   align-items: center;
-  border-top: 5px solid #002a5c;
+  border-top: 5px solid #ffc72c;
 }
 footer .wrapper .legal-footer-container .copyright {
   width: 25%;
@@ -617,5 +635,5 @@ footer .wrapper .legal-footer-container .legal .legal-list li {
 }
 footer .wrapper .legal-footer-container .legal .legal-list li a {
   text-decoration: none;
-  color: black;
+  color: #fff;
 }
