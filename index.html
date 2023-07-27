@@ -11,8 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Roboto:wght@300;500&display=swap"
         rel="stylesheet">
 
+    <!-- bootstrap import -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <!-- font awesome icons -->
+
+    <script src="https://kit.fontawesome.com/84bf206d2c.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
@@ -121,10 +127,10 @@
             </div>
         
         </section>
-        <section id="testimonials">
-            <!-- display testimonials with a carousel - maybe make it automatic -->
-            <!-- include names, photos, and positive feed back along with rating -->
-        </section>
+        <!-- <section id="testimonials">
+            display testimonials with a carousel - maybe make it automatic
+            include names, photos, and positive feed back along with rating
+        </section> -->
         <section class="call-to-action">
             <div class="wrapper">
                 <!-- Make this a form section to sign up today -->
@@ -145,64 +151,62 @@
         </section>
     </main>
     <footer>
-        <!-- one div for logo and copyright -->
-        <!-- create a div to hold the rest of the items for extended links like terms and service, privacy policy, about us, etc -->
-        <div>
-            <!-- For logo, text, and social media icons -->
-        </div>
-        <div>
-            <!-- to hold 4 main sections of page, solutions, company, features and education -->
-            <div class="solutions">
-                <h4>Solutions</h4>
-                <ul>
-                    <li><a href="#">Freelancers</a></li>
-                    <li><a href="#">Small business</a></li>
-                    <li><a href="#">Customers</a></li>
-                    <li><a href="#">Pricing</a></li>
-                </ul>
+        <div class="wrapper">
+            <div class="site-footer-container">
+                <!-- one div for logo and copyright -->
+                <!-- create a div to hold the rest of the items for extended links like terms and service, privacy policy, about us, etc -->
+                <div class="logo-icon-container">
+                    <!-- For logo, text, and social media icons -->
+                    <h2 class="logo footer-heading">PsychTrade</h2>
+                    <ul class="icon-list">
+                        <li>
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav-container">
+                    <!-- to hold 4 main sections of page, solutions, company, features and education -->
+                    <div class="company">
+                        <h4 class="footer-heading">Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Psychology Tests</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="resources">
+                        <h4 class="footer-heading">Resources</h4>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Currency Tracker</a></li>
+                        </ul>
+                    </div>
+                
+                    <div class="attributes">
+                        <h4 class="footer-heading">Attributions</h4>
+                        <ul>
+                            <li><a href="https://storyset.com/data">Data illustrations by Storyset</a></li>
+                            <li><a href="https://storyset.com/education">Education illustrations by Storyset</a></li>
+                            <li><a href="https://storyset.com/data">Data illustrations by Storyset</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="company">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="features">
-                <h4>Features</h4>
-                <ul>
-                    <li><a href="#">Invocing</a></li>
-                    <li><a href="#">Bill pay</a></li>
-                    <li><a href="#">Flow</a></li>
-                    <li><a href="#">Integrations</a></li>
-                </ul>
-            </div>
-            <div class="education">
-                <h4>Education</h4>
-                <ul>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">eBooks</a></li>
-                    <li><a href="#">Guides</a></li>
-                    <li><a href="#">Templates</a></li>
-                    <li><a href="#">Using Hopscotch</a></li>
-                </ul>
-            </div>
-            <div class="attributes">
-                <a href="https://storyset.com/data">Data illustrations by Storyset</a>
-                <a href="https://storyset.com/education">Education illustrations by Storyset</a>
-                <a href="https://storyset.com/data">Data illustrations by Storyset</a>
-            </div>
-        </div>
-        <div>
-            <!-- To hold copyright and terms of service stuff -->
-            <p>@psychtrader 2023</p>
-            <div class="legal">
-                <ul>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                </ul>
+            <div class="legal-footer-container">
+                <!-- To hold copyright and terms of service stuff -->
+                <p class="copyright">@psychtrade 2023</p>
+                <div class="legal">
+                    <ul class="legal-list">
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>
