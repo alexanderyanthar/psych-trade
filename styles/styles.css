@@ -695,3 +695,32 @@ footer .wrapper .legal-footer-container .legal .legal-list li a {
     margin-top: 2rem;
   }
 }
+@media (max-width: 1024px) {
+  footer {
+    height: auto;
+  }
+  footer .wrapper .site-footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .wrapper .site-footer-container .logo-icon-container {
+    align-self: flex-start;
+  }
+  footer .wrapper .site-footer-container .footer-nav-container {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  footer .wrapper .site-footer-container .footer-nav-container .company,
+  footer .wrapper .site-footer-container .footer-nav-container .resources {
+    height: 100%;
+    margin-right: 2rem;
+  }
+  footer .wrapper .site-footer-container .footer-nav-container .company .footer-heading-ul,
+  footer .wrapper .site-footer-container .footer-nav-container .resources .footer-heading-ul,
+  footer .wrapper .site-footer-container .footer-nav-container .attributes .footer-heading-ul {
+    padding-bottom: 1rem;
+  }
+  footer .wrapper .legal-footer-container {
+    padding: 1rem 0;
+  }
+}
