@@ -127,6 +127,28 @@
 }
 
 @media (max-width: $tablets) {
+
+    header .header-hero-section {
+        height: 88%;
+
+        .header-text {
+            width: 100%;
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .company-name {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+
+        }
+    }
+
     header nav {
         text-align: right;
         position: relative;
@@ -189,6 +211,116 @@
         .ham1.active .bottom {
             stroke-dashoffset: -138px;
         }
+    }
+
+    // features section
+    .features {
+        padding: 2rem 0;
+
+        .psych-assessments,
+        .personalized-strategies {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .risk-management-techniques {
+            margin-top: 0;
+        }
+
+        .feature-container .feature-description {
+            padding: 0 0;
+        }
+
+        .psych-assessments {
+            margin-right: 0;
+        }
+
+        .feature-container h3 {
+            font-size: 1.5rem;
+            width: 90%;
+        }
+
+        .feature-container.active h3 {
+            bottom: 50%
+        }
+
+        .feature-container .feature-description {
+            padding: 0 1rem;
+        }
+
+        .feature-container.active .feature-description {
+            top: 60%;
+        }
+    }
+
+    // how it works section
+    .how-it-works .carousel .carousel-inner .carousel-item  {
+        .carousel-slide-title h3 {
+            padding: 0 1rem;
+            font-size: 1.25rem;
+        }
+
+        .carousel-slide-text p {
+            padding: 0 1rem;
+        }
+    }
+
+    // call to action section 
+    .call-to-action .wrapper {
+        height: auto;
+        flex-direction: column;
+        padding: 2rem 0;
+
+        .call-to-action-text {
+            width: 100%;
+            font-size: 1.25rem;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .contact-form {
+            width: 100%;
+        }
+
+        .call-to-action-form-container {
+            align-items: center;
+
+            .password {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    // footer
+
+    footer .wrapper {
+
+        .site-footer-container .logo-icon-container {
+            width: 50%;
+        }
+
+        .site-footer-container .footer-nav-container {
+            flex-direction: column;
+
+            .company,
+            .resources {
+                margin-bottom: 2rem;
+            }
+        }
+
+        .legal-footer-container {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        .legal-footer-container .legal {
+            font-size: 0.65rem;
+            padding: 1rem 0;
+        }
+
+
+
+
     }
 }
 

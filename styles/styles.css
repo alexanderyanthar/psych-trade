@@ -590,6 +590,10 @@ footer .wrapper .site-footer-container .footer-nav-container ul {
 footer .wrapper .site-footer-container .footer-nav-container ul li a {
   text-decoration: none;
   color: #fff;
+  transition: 0.2s ease-out;
+}
+footer .wrapper .site-footer-container .footer-nav-container ul li a:hover {
+  color: #ffc72c;
 }
 footer .wrapper .site-footer-container .logo-icon-container {
   display: flex;
@@ -609,6 +613,10 @@ footer .wrapper .site-footer-container .logo-icon-container .icon-list {
 footer .wrapper .site-footer-container .logo-icon-container .icon-list li a {
   text-decoration: none;
   color: #fff;
+  transition: 0.2s ease-out;
+}
+footer .wrapper .site-footer-container .logo-icon-container .icon-list li a:hover {
+  color: #ffc72c;
 }
 
 footer .wrapper .legal-footer-container {
@@ -636,6 +644,10 @@ footer .wrapper .legal-footer-container .legal .legal-list li {
 footer .wrapper .legal-footer-container .legal .legal-list li a {
   text-decoration: none;
   color: #fff;
+  transition: 0.2s ease-out;
+}
+footer .wrapper .legal-footer-container .legal .legal-list li a:hover {
+  color: #ffc72c;
 }
 
 @media (max-width: 1200px) {
@@ -725,6 +737,21 @@ footer .wrapper .legal-footer-container .legal .legal-list li a {
   }
 }
 @media (max-width: 768px) {
+  header .header-hero-section {
+    height: 88%;
+  }
+  header .header-hero-section .header-text {
+    width: 100%;
+  }
+  header .header-hero-section .header-text h1 {
+    font-size: 1.5rem;
+  }
+  header .header-hero-section .header-text .company-name {
+    font-size: 2.5rem;
+  }
+  header .header-hero-section .header-text h2 {
+    font-size: 1.25rem;
+  }
   header nav {
     text-align: right;
     position: relative;
@@ -776,5 +803,80 @@ footer .wrapper .legal-footer-container .legal .legal-list li a {
   }
   header nav .hamburger-menu-container .ham1.active .bottom {
     stroke-dashoffset: -138px;
+  }
+  .features {
+    padding: 2rem 0;
+  }
+  .features .psych-assessments,
+  .features .personalized-strategies {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .features .risk-management-techniques {
+    margin-top: 0;
+  }
+  .features .feature-container .feature-description {
+    padding: 0 0;
+  }
+  .features .psych-assessments {
+    margin-right: 0;
+  }
+  .features .feature-container h3 {
+    font-size: 1.5rem;
+    width: 90%;
+  }
+  .features .feature-container.active h3 {
+    bottom: 50%;
+  }
+  .features .feature-container .feature-description {
+    padding: 0 1rem;
+  }
+  .features .feature-container.active .feature-description {
+    top: 60%;
+  }
+  .how-it-works .carousel .carousel-inner .carousel-item .carousel-slide-title h3 {
+    padding: 0 1rem;
+    font-size: 1.25rem;
+  }
+  .how-it-works .carousel .carousel-inner .carousel-item .carousel-slide-text p {
+    padding: 0 1rem;
+  }
+  .call-to-action .wrapper {
+    height: auto;
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+  .call-to-action .wrapper .call-to-action-text {
+    width: 100%;
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  .call-to-action .wrapper .contact-form {
+    width: 100%;
+  }
+  .call-to-action .wrapper .call-to-action-form-container {
+    align-items: center;
+  }
+  .call-to-action .wrapper .call-to-action-form-container .password {
+    margin-bottom: 2rem;
+  }
+  footer .wrapper .site-footer-container .logo-icon-container {
+    width: 50%;
+  }
+  footer .wrapper .site-footer-container .footer-nav-container {
+    flex-direction: column;
+  }
+  footer .wrapper .site-footer-container .footer-nav-container .company,
+  footer .wrapper .site-footer-container .footer-nav-container .resources {
+    margin-bottom: 2rem;
+  }
+  footer .wrapper .legal-footer-container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  footer .wrapper .legal-footer-container .legal {
+    font-size: 0.65rem;
+    padding: 1rem 0;
   }
 }
