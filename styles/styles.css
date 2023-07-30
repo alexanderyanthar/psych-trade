@@ -637,3 +637,61 @@ footer .wrapper .legal-footer-container .legal .legal-list li a {
   text-decoration: none;
   color: #fff;
 }
+
+@media (max-width: 1200px) {
+  .features {
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .features .psych-assessments, .features .personalized-strategies {
+    width: 47%;
+  }
+  .features .risk-management-techniques {
+    margin-top: 1rem;
+    width: 97%;
+    height: 39vh;
+  }
+  .features .feature-container .feature-description {
+    padding: 0.75rem 1rem;
+  }
+  .features .feature-container h3 {
+    bottom: 16%;
+  }
+  .how-it-works {
+    height: 80vh;
+  }
+  .how-it-works .carousel .carousel-inner .carousel-item, .how-it-works .carousel-slide-text-p {
+    text-align: center;
+  }
+  .call-to-action .wrapper .call-to-action-text {
+    width: 50%;
+  }
+  .call-to-action .wrapper .contact-form {
+    width: 40%;
+  }
+  .call-to-action .wrapper .call-to-action-form-container {
+    width: 100%;
+    flex-direction: column;
+  }
+  .call-to-action .wrapper .call-to-action-form-container .password {
+    width: 100%;
+    margin: 0 0;
+    margin-bottom: 1rem;
+  }
+  .call-to-action .wrapper .call-to-action-form-container .submit-btn {
+    width: 50%;
+    padding: 0.5rem;
+  }
+  .call-to-action .wrapper .call-to-action-form-container .email {
+    width: 100%;
+    margin: 0 0;
+    margin-bottom: 1rem;
+  }
+  footer .wrapper .site-footer-container {
+    height: 70%;
+  }
+  footer .wrapper .legal-footer-container {
+    margin-top: 2rem;
+  }
+}

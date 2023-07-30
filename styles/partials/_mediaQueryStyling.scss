@@ -1,0 +1,89 @@
+@use './variables' as *;
+
+
+
+@media (max-width: $laptops) {
+    // feature section
+
+    .features {
+        height: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        .psych-assessments, .personalized-strategies {
+            width: 47%;
+        }
+
+        .risk-management-techniques {
+            margin-top: 1rem;
+            width: 97%;
+            height: 39vh;
+        }
+
+        .feature-container .feature-description {
+            padding: 0.75rem 1rem;
+        }
+
+        .feature-container h3 {
+            bottom: 16%;
+        }
+    }
+    
+        // how it works section
+    .how-it-works {
+        height: 80vh;
+
+        .carousel .carousel-inner .carousel-item, .carousel-slide-text-p {
+            text-align: center;
+        }
+    }
+
+    // call to action section
+    .call-to-action .wrapper {
+
+        .call-to-action-text {
+            width: 50%;
+        }
+
+        .contact-form {
+            width: 40%;
+        }
+
+        .call-to-action-form-container {
+            width: 100%;
+            flex-direction: column;
+
+            .password {
+                width: 100%;
+                margin: 0 0;
+                margin-bottom: 1rem;
+            }
+
+            .submit-btn {
+                width: 50%;
+                padding: 0.5rem;
+            }
+
+            .email {
+                width: 100%;
+                margin: 0 0;
+                margin-bottom: 1rem;
+            }
+
+
+        }
+    }
+
+    // footer 
+    footer .wrapper {
+        .site-footer-container {
+            height: 70%;
+        }
+
+        .legal-footer-container {
+            margin-top: 2rem;
+        }
+    }
+
+}
+
