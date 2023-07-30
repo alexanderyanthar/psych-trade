@@ -25,11 +25,20 @@
 <body>
     <header>
         <nav>
+            <div class="hamburger-menu-container">
+                <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80">
+                    <path class="line top"
+                        d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+                    <path class="line middle" d="m 30,50 h 40" />
+                    <path class="line bottom"
+                        d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+                </svg>
+            </div>
             <ul class="header-nav">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a class="header-link" href="#home">Home</a></li>
+                <li><a class="header-link" href="#features">Features</a></li>
+                <li><a class="header-link" href="#how-it-works">How It Works</a></li>
+                <li><a class="header-link" href="#contact">Contact</a></li>
             </ul>
         </nav>
 
@@ -39,6 +48,8 @@
                 <h2>Discover the Power of Psychology and Make Smarter Trading Decisions</h2>
             </div>
         </div>
+
+        
 
     </header>
 
@@ -167,7 +178,7 @@
                 </div>
                 <div class="footer-nav-container">
                     <!-- to hold 4 main sections of page, solutions, company, features and education -->
-                    <div class="company">
+                    <nav class="company">
                         <h4 class="footer-heading-ul">Company</h4>
                         <ul>
                             <li><a href="#">About Us</a></li>
@@ -175,8 +186,8 @@
                             <li><a href="#">Psychology Tests</a></li>
                             <li><a href="#">Contact</a></li>
                         </ul>
-                    </div>
-                    <div class="resources">
+                    </nav>
+                    <nav class="resources">
                         <h4 class="footer-heading-ul">Resources</h4>
                         <ul>
                             <li><a href="#">Blog</a></li>
@@ -184,28 +195,28 @@
                             <li><a href="#">Support</a></li>
                             <li><a href="#">Currency Tracker</a></li>
                         </ul>
-                    </div>
+                    </nav>
                 
-                    <div class="attributes">
+                    <nav class="attributes">
                         <h4 class="footer-heading-ul">Attributions</h4>
                         <ul>
                             <li><a href="https://storyset.com/data">Data illustrations by Storyset</a></li>
                             <li><a href="https://storyset.com/education">Education illustrations by Storyset</a></li>
                             <li><a href="https://storyset.com/data">Data illustrations by Storyset</a></li>
                         </ul>
-                    </div>
+                    </nav>
                 </div>
             </div>
             <div class="legal-footer-container">
                 <!-- To hold copyright and terms of service stuff -->
                 <p class="copyright">@psychtrade 2023</p>
-                <div class="legal">
+                <nav class="legal">
                     <ul class="legal-list">
                         <li><a href="#">Terms & Conditions</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Cookie Policy</a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
         </div>
     </footer>
