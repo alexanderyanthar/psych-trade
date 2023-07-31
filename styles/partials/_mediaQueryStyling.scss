@@ -173,6 +173,7 @@
 
     header nav .hamburger-menu-container {
         background-color: $deepBlue;
+        display: block;
 
         .ham {
             cursor: pointer;
@@ -324,3 +325,50 @@
     }
 }
 
+// phones
+
+@media(max-width: $phones) {
+
+    // header
+    header .header-hero-section {
+        .header-text {
+            .company-name {
+                font-size: 2rem;
+            }
+
+            .h2 {
+                font-size: 1rem;
+            }
+        }
+    }
+
+
+    // features section
+    .features {
+        .feature-container {
+            h3 {
+                font-size: 1.25rem;
+            }
+
+            .feature-description {
+                font-size: 0.8rem;
+            }
+        }
+
+        .feature-container.active h3 {
+            bottom: 60%;
+        }
+
+        .feature-container.active .feature-description {
+            top: 50%;
+        }
+    } 
+
+    // how it works
+
+    .how-it-works .carousel .carousel-inner .carousel-item {
+        .carousel-slide-text p {
+            bottom: 30%;
+        }
+    }
+}

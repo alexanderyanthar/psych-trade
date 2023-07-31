@@ -292,6 +292,9 @@ header {
   background-repeat: no-repeat;
   height: 100vh;
 }
+header .hamburger-menu-container {
+  display: none;
+}
 header .header-nav {
   background-color: #002a5c;
   display: flex;
@@ -437,7 +440,7 @@ header .header-hero-section .header-text p {
 
 .how-it-works {
   height: 90vh;
-  background-color: #707070;
+  background-color: rgb(112, 112, 112);
 }
 
 .how-it-works .how-it-works-header {
@@ -481,7 +484,7 @@ header .header-hero-section .header-text p {
 
 .how-it-works .carousel .carousel-inner .carousel-item .background-filter {
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .how-it-works .carousel .carousel-inner .carousel-item .carousel-slide-title {
@@ -492,7 +495,7 @@ header .header-hero-section .header-text p {
 }
 .how-it-works .carousel .carousel-inner .carousel-item .carousel-slide-title h3 {
   position: absolute;
-  top: 40%;
+  top: 25%;
 }
 
 .how-it-works .carousel .carousel-inner .carousel-item .carousel-slide-text {
@@ -773,6 +776,7 @@ footer .wrapper .legal-footer-container .legal .legal-list li a:hover {
   }
   header nav .hamburger-menu-container {
     background-color: #002a5c;
+    display: block;
   }
   header nav .hamburger-menu-container .ham {
     cursor: pointer;
@@ -878,5 +882,28 @@ footer .wrapper .legal-footer-container .legal .legal-list li a:hover {
   footer .wrapper .legal-footer-container .legal {
     font-size: 0.65rem;
     padding: 1rem 0;
+  }
+}
+@media (max-width: 480px) {
+  header .header-hero-section .header-text .company-name {
+    font-size: 2rem;
+  }
+  header .header-hero-section .header-text .h2 {
+    font-size: 1rem;
+  }
+  .features .feature-container h3 {
+    font-size: 1.25rem;
+  }
+  .features .feature-container .feature-description {
+    font-size: 0.8rem;
+  }
+  .features .feature-container.active h3 {
+    bottom: 60%;
+  }
+  .features .feature-container.active .feature-description {
+    top: 50%;
+  }
+  .how-it-works .carousel .carousel-inner .carousel-item .carousel-slide-text p {
+    bottom: 30%;
   }
 }
