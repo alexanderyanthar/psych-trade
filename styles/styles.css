@@ -228,6 +228,7 @@ template {
 
 html {
   font-size: 125%;
+  overflow-x: hidden;
 }
 
 body {
