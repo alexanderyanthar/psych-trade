@@ -145,18 +145,19 @@
             <div class="wrapper">
                 <!-- Make this a form section to sign up today -->
                 <h3 class="call-to-action-text">Start Optimizing Your Trades Today!</h3>
-                <form id="contact" class="contact-form" action="#">
+                <form id="signup-form" class="signup-form">
 
-                    <div class="call-to-action-form-container">
-                        <!-- <label for="email">Email: </label> -->
-                        <input type="email", id="email" class="email" name="email" size="30" placeholder="Email" required>
+                    <fieldset class="call-to-action-form-container">
+                        <label for="username"></label>
+                        <input type="email" id="username" class="email" name="username" size="30" placeholder="Email" required>
         
-                        <!-- <label for="pass">Password (8 characters minimum): </label> -->
-                        <input type="password" class="password" id="pass" name="password" minlength="8" placeholder="Create password" required>
+                        <label for="password"></label>
+                        <input type="password" class="password" id="password" name="password" minlength="8" placeholder="Create password" required>
         
                         <button class="submit-btn" type="submit">Sign up</button>
-                    </div>
+                    </>
                 </form>
+                <div id="message"></div>
             </div>
         </section>
     </main>

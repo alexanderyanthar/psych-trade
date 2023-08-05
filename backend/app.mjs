@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import session from 'express-session';
 import passport from 'passport';
 import { Strategy as LocalStrategy } from 'passport-local';
@@ -20,6 +21,7 @@ app.use(session({
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -67,10 +69,10 @@ app.get('/logout', (req, res) => {
     res.redirect('/');
 });
 
+
+
 // Add a new route for handling signup
 app.post('/signup', async (req, res) => {
-    const { username, password } = req.body;
-    res.send(`got the username: ${username} and pass ${password}`);
     try {
         const { username, password } = req.body;
 
@@ -85,7 +87,8 @@ app.post('/signup', async (req, res) => {
         await newUser.save();
 
         console.log('got it');
-        res.redirect('/login');
+        res.status(201).send('User created successfully');
+        // res.redirect('/login');
     } catch(err) {
         console.error(err);
         res.status(500).send('Error creating user');
