@@ -5,7 +5,10 @@ import passport from 'passport';
 import { Strategy as LocalStrategy } from 'passport-local';
 import bcrypt from 'bcrypt';
 import mongoose from 'mongoose';
-import crypto from 'crypto';
+import crypto, { sign } from 'crypto';
+import ejs from 'ejs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const app = express();
 const PORT = 3000;
@@ -26,6 +29,14 @@ app.use(cors());
 app.use(passport.initialize());
 app.use(passport.session());
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Set the view engine to EJS
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+
 const User = mongoose.model('User', new mongoose.Schema({
     username: {
         type: String,
@@ -37,12 +48,13 @@ const User = mongoose.model('User', new mongoose.Schema({
     },
 }));
 
+// Passport configuration
 passport.use(new LocalStrategy((username, password, done) => {
     User.findOne({ username }, (err, user) => {
         if (err) return done(err);
-        if(!user) return done(null, false, { message: 'Incorrect username.'});
-        if(!bcrypt.compareSync(password, user.password)) {
-            return done(null, false, { message: 'Incorrect password.'});
+        if (!user) return done(null, false, { message: 'Incorrect username.' });
+        if (!bcrypt.compareSync(password, user.password)) {
+            return done(null, false, { message: 'Incorrect password.' });
         }
         return done(null, user);
     });
@@ -52,32 +64,26 @@ passport.serializeUser((user, done) => {
     done(null, user.id);
 });
 
-passport.deserializeUser((id, done) => {
-    User.findById(id, (err, user) => {
-        done(err, user);
-    });
+passport.deserializeUser(async (id, done) => {
+    try {
+        const user = await User.findById(id);
+        done(null, user);
+    } catch (err) {
+        done(err);
+    }
 });
 
-app.post('/login', passport.authenticate('local', { successRedirect: '/profile', failureRedirect: '/login'}));
-
-app.get('/profile', (req, res) => {
-    res.json(`Welcome, ${req.user.username}!`);
-});
-
-app.get('/logout', (req, res) => {
-    req.logOut();
-    res.redirect('/');
-});
+app.get('/signup', (req, res) => {
+    res.render('signup');
+})
 
 
-
-// Add a new route for handling signup
-app.post('/signup', async (req, res) => {
+app.post('/profile', async (req, res) => {
     try {
         const { username, password } = req.body;
 
-        const existingUser = await User.findOne({ username });
-        if(existingUser) {
+        const existingUser =  await User.findOne({ username });
+        if (existingUser) {
             return res.status(400).send('Username already taken');
         }
 
@@ -86,16 +92,27 @@ app.post('/signup', async (req, res) => {
         const newUser = new User({ username, password: hashedPassword });
         await newUser.save();
 
-        console.log('got it');
-        res.status(201).send('User created successfully');
-        // res.redirect('/login');
-    } catch(err) {
-        console.error(err);
+        req.login(newUser, (err) => {
+            if (err) {
+                console.error(err);
+                return res.status(500).send('Error creating user');
+            }
+
+            res.redirect('/profile');
+        });
+    } catch (err) {
         res.status(500).send('Error creating user');
     }
-});
+})
 
 
-app.listen(PORT,() => {
+app.get('/profile', (req, res) => {
+    const { username } = req.user;
+    console.log(username);
+    res.render('profile', { username });
+})
+
+
+app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
 });

@@ -58,42 +58,15 @@ hamburgerMenu.addEventListener('click', () => {
 })
 
 // form submission
-document.getElementById('signup-form').addEventListener('submit', async (e) => {
-  e.preventDefault();
+// front-end JavaScript (front-end-js-file.js)
 
-  const form = e.target;
-  const formData = {
-    username: form.username.value,
-    password: form.password.value,
-  }
+document.getElementById('signup-Button').addEventListener('click', () => {
+  window.location.href = 'http://localhost:3000/signup';
+})
 
-  try {
-    const response = await fetch('http://localhost:3000/signup', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
 
-    if (response.ok) {
-      // If the response is successful (status code 2xx),
-      // display a success message
-      document.getElementById('message').textContent = 'Sign up successful! Please log in.';
-      form.reset();
 
-      // Optionally, you can redirect to the login page after successful sign-up
-    //   window.location.href = 'http://localhost:3000/login';
-    } else {
-      // If the response is not successful (status code not 2xx),
-      // display an error message
-      document.getElementById('message').textContent = 'Sign up failed. Please try again.';
-    }
-  } catch (error) {
-    // If there's an error with the request (e.g., network issue),
-    // display an error message
-    document.getElementById('message').textContent = 'An error occurred. Please try again later.';
-  }
-});
+
+
 
 
