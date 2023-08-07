@@ -64,6 +64,10 @@ document.getElementById('signup-Button').addEventListener('click', () => {
   window.location.href = 'http://localhost:3000/signup';
 })
 
+document.getElementById('login-btn').addEventListener('click', () => {
+    window.location.href = 'http://localhost:3000/login';
+})
+
 
 
 

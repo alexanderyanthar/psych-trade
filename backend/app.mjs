@@ -49,15 +49,18 @@ const User = mongoose.model('User', new mongoose.Schema({
 }));
 
 // Passport configuration
-passport.use(new LocalStrategy((username, password, done) => {
-    User.findOne({ username }, (err, user) => {
-        if (err) return done(err);
-        if (!user) return done(null, false, { message: 'Incorrect username.' });
-        if (!bcrypt.compareSync(password, user.password)) {
-            return done(null, false, { message: 'Incorrect password.' });
-        }
+passport.use(new LocalStrategy(async (username, password, done) => {
+    try {
+        const user = await User.findOne({ username });
+        if (!user) return done(null, false, { message: 'Incorrect username'});
+
+        const isPasswordValid = await bcrypt.compare(password, user.password);
+        if (!isPasswordValid) return done(null, false, { message: 'Incorrect password' });
+
         return done(null, user);
-    });
+    } catch(err) {
+        return done(err);
+    }
 }));
 
 passport.serializeUser((user, done) => {
@@ -77,8 +80,18 @@ app.get('/signup', (req, res) => {
     res.render('signup');
 })
 
+app.get('/login', (req, res) => {
+    res.render('login');
+})
 
-app.post('/profile', async (req, res) => {
+app.post('/login', passport.authenticate('local', {
+    successRedirect: '/profile',
+    failureRedirect: '/login',
+    failureFlash: true
+}))
+
+
+app.post('/signup', async (req, res) => {
     try {
         const { username, password } = req.body;
 
