@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import {Schema, mongoose } from "mongoose";
 
 export const User = mongoose.model('User', new mongoose.Schema({
     username: {
@@ -9,4 +9,5 @@ export const User = mongoose.model('User', new mongoose.Schema({
         type: String,
         required: true,
     },
+    assessments: [{ type: Schema.Types.ObjectId, ref: 'Assessment' }]
 }));
