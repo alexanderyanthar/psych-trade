@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Type Assessment</title>
+</head>
+<body>
+    <h1>Analysis Assessment</h1>
+    <form action="/submitAssessment" method="POST">
+        <% for (const question of questions) { %>
+            <div class="question">
+                <p>
+                    <%= question.text %>
+                </p>
+                <% for (const option of question.options) { %>
+                    <label>
+                        <input type="radio" name="<%= question._id %>" value="<%= option.points %>">
+                        <%= option.text %>
+                    </label>
+                    <% } %>
+            </div>
+            <% } %>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

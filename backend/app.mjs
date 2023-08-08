@@ -14,6 +14,7 @@ import { login, getProfile, logout, signup } from './controllers/userController.
 import userRoutes from './routes/userRoutes.mjs';
 import connectDB from './db.mjs';
 import configurePassport from './config/passportConfig.mjs';
+import { Question } from './models/assessment.mjs';
 
 const app = express();
 const PORT = 3000;
@@ -46,6 +47,69 @@ app.set('views', path.join(__dirname, 'views'));
 configurePassport();
 
 app.use('/', userRoutes);
+
+app.get('/assessment', async (req, res) => {
+    try {
+        const questions = await Question.find().populate('options.points');
+        console.log(req.user._id);
+
+        res.render('assessment', { questions });
+    } catch (err) {
+        console.error('Error fetching assessment questions:', err);
+        res.status(500).send('Iternal Server Error');
+    }
+});
+
+app.post('/submitAssessment', async (req, res) => {
+    console.log('Form submitted')
+    try {
+        const userId = req.user._id;
+        const user = await User.findById(userId);
+
+        const userAnswers = [];
+
+        let fundamentalPoints = 0;
+        let technicalPoints = 0;
+        let hybridPoints = 0;
+        let userPreference = '';
+
+        for (const questionId in req.body) {
+            const selectedOptionPoints = parseInt(req.body[questionId]);
+            if (selectedOptionPoints === 1) {
+                fundamentalPoints += 1;
+            } else if (selectedOptionPoints === 2) {
+                technicalPoints += 1;
+            } else if (selectedOptionPoints === 3) {
+                hybridPoints += 1;
+            }
+        }
+
+    if (fundamentalPoints > technicalPoints && fundamentalPoints > hybridPoints) {
+        userPreference = 'fundamental';
+    } else if (technicalPoints > fundamentalPoints && technicalPoints > hybridPoints) {
+        userPreference = 'technical';
+    } else if (hybridPoints > fundamentalPoints && hybridPoints > technicalPoints) {
+        userPreference = 'hybrid';
+    } else if (fundamentalPoints === hybridPoints) {
+        userPreference = 'hybrid leaning toward fundamental';
+    } else if (fundamentalPoints === technicalPoints) {
+        userPreference = 'hybrid';
+    } else if (technicalPoints === hybridPoints) {
+        userPreference = 'hybrid leaning towards technical';
+    }
+
+    console.log(`User preference: ${userPreference}`);
+    console.log(`Points - Fundamental: ${fundamentalPoints}, Technical: ${technicalPoints}, Hybrid: ${hybridPoints}`);
+
+
+
+
+        res.redirect('/profile');
+    } catch (err) {
+        console.error('Error submitting assessment:', err);
+        res.status(500).send('Internal Server Error');
+    }
+});
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);

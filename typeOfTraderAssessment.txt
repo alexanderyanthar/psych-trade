@@ -1,0 +1,73 @@
+Question 1: Your favorite uncle's 50th birthday is coming up and you want to make a big celebration for him. How do you prepare for it?
+
+    Option 1. Position Trader - I've been preparing for this celebration for the entire year in case the plans I made started falling through.
+    Option 2. Algorithmic Trader - I have reminders on my phone and I've written a program that takes care of reservations for me by simply imputting the date, time and location of the event I want.
+    Option 3. Swing Trader - When the big day is just a few months away, I start looking around for my uncle's favorite things to do and set up times and reservations.
+    Option 4. Day Trader - I set up a special surprise party and bake a cake at his home the day of his birthday.
+    Option 5. Scalper - I can't wait to celebrate my uncle's birthday so I give him a call first thing in the morning and drive over to see him.
+
+Question 2: Your friends are planning a weekend getaway, and they want you to join them. How do you decide whether to go or not?
+
+Option 1. Position Trader - I carefully weigh the long-term benefits and commitments before committing to the getaway, considering how it fits into my overall plans.
+Option 2. Algorithmic Trader - I use a decision-making algorithm that takes into account my schedule, budget, and preferences, ensuring an efficient choice without much fuss.
+Option 3. Swing Trader - I analyze the potential fun and experiences of the trip, checking for any medium-term conflicts, and make a decision based on the excitement it offers.
+Option 4. Day Trader - I spontaneously decide on the day of the trip, assessing my mood and workload, and join my friends if everything aligns perfectly.
+Option 5. Scalper - I'm thrilled about the idea, so I quickly pack my bags and decide to join my friends for an impromptu adventure!
+
+Question 3: Your favorite band is performing in town, and tickets are selling out fast. How do you approach getting tickets for the show?
+
+Option 1. Position Trader - I secured my tickets months ago, taking advantage of early-bird sales and long-term planning for a fantastic seat at the concert.
+Option 2. Algorithmic Trader - My ticket-buying algorithm keeps a constant watch on ticket sales, ready to make the purchase when the perfect seats become available.
+Option 3. Swing Trader - I monitor ticket availability, waiting for the right moment to make my move and purchase tickets before they sell out.
+Option 4. Day Trader - I jump on the opportunity as soon as I hear about the concert, swiftly buying tickets on the same day to secure my spot at the show.
+Option 5. Scalper - I quickly purchase tickets the moment they go on sale, making sure I don't miss out on the chance to see my favorite band live!
+
+Question 4: Your friend asks for your help in planning a surprise proposal for their partner. How do you approach organizing this special moment?
+
+Option 1. Position Trader - I meticulously plan the proposal months in advance, ensuring every detail is perfect for this once-in-a-lifetime event.
+Option 2. Algorithmic Trader - I use a proposal-planning program that generates romantic ideas and manages the logistics for a seamless surprise.
+Option 3. Swing Trader - I start brainstorming ideas a few weeks before the proposal, carefully choosing the best way to create a memorable moment.
+Option 4. Day Trader - I spontaneously come up with the plan the day before the proposal, relying on my intuition and quick decision-making to create a beautiful surprise.
+Option 5. Scalper - I'm so excited to help with the proposal that I immediately jump in, enthusiastically assisting in planning every detail of this special occasion.
+
+
+Question 6: Your favorite electronic gadget is on sale for a limited time. How do you decide whether to buy it or not?
+
+Option 1. Position Trader - I carefully weigh the long-term value and utility of the gadget, considering its impact on my overall budget and needs before making a decision.
+Option 2. Algorithmic Trader - I have an algorithm that compares the sale price with historical prices and trends, ensuring I get the best deal possible before making the purchase.
+Option 3. Swing Trader - I assess the gadget's features and reviews, taking a short-term view of how it will benefit my daily life, and make the purchase if it fits my current needs.
+Option 4. Day Trader - I quickly research the gadget's specifications and make a spontaneous decision, buying it immediately if it aligns with my tech-savvy interests.
+Option 5. Scalper - I can't resist a good deal, so I swiftly click "buy" the moment I see the sale, securing the gadget before it goes out of stock!
+
+Question 7: You have a free day with no plans. How do you spend your day?
+Option 1. Position Trader - I use the day to relax and rejuvenate, taking a well-deserved break to recharge for future endeavors.
+Option 2. Algorithmic Trader - I follow my pre-planned routine for a productive day, engaging in various activities I've scheduled in advance for maximum efficiency.
+Option 3. Swing Trader - I explore various fun options, taking a spontaneous approach to the day and doing whatever feels enjoyable at the moment.
+Option 4. Day Trader - I seize the day and embark on exciting adventures, making the most of my free time and ensuring a day full of fun and excitement.
+Option 5. Scalper - I can't wait to do something thrilling, so I immediately head out for a spontaneous adventure, living life to the fullest with every passing moment!
+
+
+Question 8: Your dream job is suddenly available, but it requires you to relocate. How do you approach this opportunity?
+
+Option 1. Position Trader - I carefully weigh the long-term implications of the job and relocation, considering how it aligns with my career goals before making a decision.
+Option 2. Algorithmic Trader - I use a decision-making algorithm to analyze the pros and cons of the job and relocation, ensuring a logical and efficient choice.
+Option 3. Swing Trader - I take a medium-term view, considering how the job and relocation will impact my life and career over the next few years before deciding.
+Option 4. Day Trader - I'm eager to take on the opportunity, so I quickly decide to go for it, embracing the excitement of a new adventure and career challenge.
+Option 5. Scalper - I can't resist the thrill of this opportunity, so I impulsively decide to relocate for my dream job, taking the leap with enthusiasm and excitement!
+
+Question 9: Your best friend is going through a tough time and needs support. How do you approach helping them?
+Option 1. Position Trader - I provide steadfast support for the long haul, being there for my friend no matter how long it takes to navigate through their difficult situation.
+Option 2. Algorithmic Trader - I offer systematic help, following a structured approach to support my friend through their tough time with thoughtful gestures and actions.
+Option 3. Swing Trader - I take a medium-term view, being there for my friend throughout their tough time, offering emotional support and practical assistance when needed.
+Option 4. Day Trader - I'm quick to respond, offering immediate support to my friend and providing a listening ear and helping hand during their tough time.
+Option 5. Scalper - I'm there for my friend at a moment's notice, offering spontaneous and enthusiastic support to help them through their challenging situation.
+
+Question 10: You want to learn a new skill or hobby. How do you approach starting this new endeavor?
+Option 1. Position Trader - I take a patient approach, understanding that mastering a new skill takes time, and I'm willing to invest in long-term learning and practice.
+Option 2. Algorithmic Trader - I use a structured learning plan and schedule, making use of apps and online courses to efficiently acquire the new skill in an organized manner.
+Option 3. Swing Trader - I take a flexible approach, exploring various resources and methods for learning, adapting my learning style to what suits me best at the moment.
+Option 4. Day Trader - I jump right in and start learning immediately, embracing the excitement of trying something new and enjoying the learning process as I go.
+Option 5. Scalper - I'm eager to learn the new skill, so I dive in headfirst and immerse myself in practice and experimentation, picking up the basics quickly and refining my abilities on the fly.
+
+
+

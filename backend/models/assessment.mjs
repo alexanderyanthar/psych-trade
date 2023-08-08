@@ -1,30 +1,35 @@
-import mongoose, { Schema, mongoose } from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
-export const assessmentTypeSchema = new mongoose.Schema({
-    name: String,
-    questions: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Question' }],
-});
-const AssessmentType = mongoose.model('AssessmentType', assessmentTypeSchema);
+const answerSchema = new mongoose.Schema({
+    question: { type: Schema.Types.ObjectId, ref: 'Question' },
+    selectedOption: String,
+})
 
-export const questionSchema = new mongoose.Schema({
+const questionSchema = new mongoose.Schema({
     text: String,
     type: String,
-    options: [{ text: String, points: Number }],
-    statements: [{ text: String, type: String, point: Number}],
+    options: [{
+        text: String,
+        points: {
+            type: Number
+        },
+    }],
 });
+
+const assessmentSchema = new mongoose.Schema({
+    name: String,
+    assessmentType: {
+        type: String,
+        enum: ['Analysis', 'TypeOfTrader', 'CognitiveBias'],
+        required: true,
+    },
+    questions: [questionSchema],
+    answers: [answerSchema],
+});
+
+
 const Question = mongoose.model('Question', questionSchema);
-
-export const answerSchema = new mongoose.Schema({
-    question: { type: mongoose.Schema.Types.ObjectId, ref: 'Question' },
-    selectedOption: String,
-    statementOption: String,
-});
 const Answer = mongoose.model('Answer', answerSchema);
-
-export const assessmentSchema = new mongoose.Schema({
-    assessmentType: { type: Schema.Types.ObjectId, ref: 'AssessmentType' },
-    answers: [{ type: Schema.Types.ObjectId, ref: 'Answer' }],
-});
 const Assessment = mongoose.model('Assessment', assessmentSchema);
 
-export { AssessmentType, Question, Answer, Assessment };
+export {Assessment, Question, Answer}
