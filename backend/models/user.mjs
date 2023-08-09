@@ -10,5 +10,5 @@ export const User = mongoose.model('User', new mongoose.Schema({
         type: String,
         required: true,
     },
-    assessments: [{ type: Schema.Types.ObjectId, ref: 'Assessment' }]
+    assessments: [{ type: Schema.Types.ObjectId, ref: 'AssessmentAnswer' }]
 }));

@@ -6,9 +6,29 @@ import passport from 'passport';
 export const login = passport.authenticate('local', { successRedirect: '/profile', failureRedirect: '/login', failureMessage: true });
 
 export const getProfile = async (req, res) => {
-    const { username } = req.user;
-    console.log(username);
-    res.render('profile', { username });
+    try {
+        const userId = req.user._id;
+        const user = await User.findById(userId).populate({
+            path: 'assessments',
+            model: 'AssessmentAnswer',
+            populate: {
+                path: 'assessment',
+                model: 'Assessment'
+            }
+        });
+
+        const hasTakenAssessment = user.assessments.length > 0;
+        let userPreference = '';
+
+        if (hasTakenAssessment) {
+            userPreference = user.assessments[0].userPreference;
+        }
+
+        res.render('profile', { username: user.username, hasTakenAssessment, userPreference });
+    } catch (err) {
+        console.error('Error fetching user profile:', err);
+        res.status(500).send('Internal Server Error');
+    }
 }
 
 // Controller function for user logout

@@ -15,6 +15,7 @@ import userRoutes from './routes/userRoutes.mjs';
 import connectDB from './db.mjs';
 import configurePassport from './config/passportConfig.mjs';
 import { Question } from './models/assessment.mjs';
+import { AssessmentAnswer } from './models/assessmentAnswer.mjs';
 
 const app = express();
 const PORT = 3000;
@@ -22,7 +23,8 @@ const secretKey = crypto.randomBytes(32).toString('hex');
 
 await mongoose.connect('mongodb://127.0.0.1:27017/PsychTradeDB');
 
-
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use(session({
     secret: secretKey,
@@ -30,15 +32,14 @@ app.use(session({
     saveUninitialized: false,
 }));
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(cors());
-
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use(cors());
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
 
 // Set the view engine to EJS
 app.set('view engine', 'ejs');
@@ -63,10 +64,9 @@ app.get('/assessment', async (req, res) => {
 app.post('/submitAssessment', async (req, res) => {
     console.log('Form submitted')
     try {
-        const userId = req.user._id;
+        const userId = req.user.id;
         const user = await User.findById(userId);
 
-        const userAnswers = [];
 
         let fundamentalPoints = 0;
         let technicalPoints = 0;
@@ -84,25 +84,39 @@ app.post('/submitAssessment', async (req, res) => {
             }
         }
 
-    if (fundamentalPoints > technicalPoints && fundamentalPoints > hybridPoints) {
-        userPreference = 'fundamental';
-    } else if (technicalPoints > fundamentalPoints && technicalPoints > hybridPoints) {
-        userPreference = 'technical';
-    } else if (hybridPoints > fundamentalPoints && hybridPoints > technicalPoints) {
-        userPreference = 'hybrid';
-    } else if (fundamentalPoints === hybridPoints) {
-        userPreference = 'hybrid leaning toward fundamental';
-    } else if (fundamentalPoints === technicalPoints) {
-        userPreference = 'hybrid';
-    } else if (technicalPoints === hybridPoints) {
-        userPreference = 'hybrid leaning towards technical';
-    }
+        if (fundamentalPoints > technicalPoints && fundamentalPoints > hybridPoints) {
+            userPreference = 'fundamental';
+        } else if (technicalPoints > fundamentalPoints && technicalPoints > hybridPoints) {
+            userPreference = 'technical';
+        } else if (hybridPoints > fundamentalPoints && hybridPoints > technicalPoints) {
+            userPreference = 'hybrid';
+        } else if (fundamentalPoints === hybridPoints) {
+            userPreference = 'hybrid leaning toward fundamental';
+        } else if (fundamentalPoints === technicalPoints) {
+            userPreference = 'hybrid';
+        } else if (technicalPoints === hybridPoints) {
+            userPreference = 'hybrid leaning towards technical';
+        }
 
-    console.log(`User preference: ${userPreference}`);
-    console.log(`Points - Fundamental: ${fundamentalPoints}, Technical: ${technicalPoints}, Hybrid: ${hybridPoints}`);
+        // console.log(`User preference: ${userPreference}`);
+        // console.log(`Points - Fundamental: ${fundamentalPoints}, Technical: ${technicalPoints}, Hybrid: ${hybridPoints}`);
 
+        const assessmentAnswers = new AssessmentAnswer({
+            user: userId,
+            userPreference: userPreference,
+            assessmentResults: [
+                {type: 'fundamental', points: fundamentalPoints},
+                {type: 'technical', points: technicalPoints},
+                {type: 'hybrid', points: hybridPoints},
+            ]
+        });
 
+        await assessmentAnswers.save();
 
+        user.assessments.push(assessmentAnswers);
+        await user.save();
+
+        console.log(req.user.assessments);
 
         res.redirect('/profile');
     } catch (err) {

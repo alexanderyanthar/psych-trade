@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
 </head>
+
 <body>
-    <h1>Welcome! <%= username %></h1>
+    <h1>Welcome! <%= username %>
+    </h1>
     <a href="/logout">Logout</a>
-    <a href="/assessment">Take Assessment!</a>
+
+    <% if (!hasTakenAssessment) { %>
+        <a href="/assessment">Take Assessment!</a>
+    <% } else { %>
+        <p>Your Assessment Preference: <%= userPreference %></p>
+    <% } %>
 
 </body>
+
 </html>
