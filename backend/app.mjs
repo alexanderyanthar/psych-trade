@@ -26,6 +26,7 @@ await mongoose.connect('mongodb://127.0.0.1:27017/PsychTradeDB');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+
 app.use(session({
     secret: secretKey,
     resave: false,
@@ -39,6 +40,8 @@ app.use(cors());
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+app.use(express.static(__dirname + '/../frontend'));
 
 
 // Set the view engine to EJS

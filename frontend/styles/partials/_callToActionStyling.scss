@@ -7,38 +7,27 @@
 .call-to-action .wrapper {
     height: 30vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
     h3 {
         font-weight: 800;
         color: $richGold;
     }
-}
 
-.call-to-action .wrapper .call-to-action-form-container {
-    display: flex;
-
-    .email,
-    .password {
-        font-size: 0.75rem;
-        margin: 0 0.5rem;
-        padding: 0.5rem 0.25rem;
-    }
-
-    .email {
-        width: 50%;
-    }
-
-    .password {
-        width: 35%;
-    }
-
-    .submit-btn {
+    .call-to-action-buttons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
         width: 25%;
+    }
+
+    .call-to-action-buttons .call-to-action-btn {
         border-style: none;
         background-color: $richGold;
         border-radius: 5px;
         transition: background-color 0.2s ease;
+        padding: 1rem;
     }
 }
+

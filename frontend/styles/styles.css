@@ -288,12 +288,21 @@ ul {
 }
 
 header {
+  position: relative;
+  height: 100vh;
+}
+
+.background-img-container {
+  position: absolute;
   background-image: url(../assets/viktor-forgacs-3PyBkxgTiL0-unsplash.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+  width: 100vw;
+  z-index: -100;
 }
+
 header .hamburger-menu-container {
   display: none;
 }
@@ -522,35 +531,25 @@ header .header-hero-section .header-text p {
 .call-to-action .wrapper {
   height: 30vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .call-to-action .wrapper h3 {
   font-weight: 800;
   color: #ffc72c;
 }
-
-.call-to-action .wrapper .call-to-action-form-container {
+.call-to-action .wrapper .call-to-action-buttons {
   display: flex;
-}
-.call-to-action .wrapper .call-to-action-form-container .email,
-.call-to-action .wrapper .call-to-action-form-container .password {
-  font-size: 0.75rem;
-  margin: 0 0.5rem;
-  padding: 0.5rem 0.25rem;
-}
-.call-to-action .wrapper .call-to-action-form-container .email {
-  width: 50%;
-}
-.call-to-action .wrapper .call-to-action-form-container .password {
-  width: 35%;
-}
-.call-to-action .wrapper .call-to-action-form-container .submit-btn {
+  justify-content: space-around;
+  align-items: center;
   width: 25%;
+}
+.call-to-action .wrapper .call-to-action-buttons .call-to-action-btn {
   border-style: none;
   background-color: #ffc72c;
   border-radius: 5px;
   transition: background-color 0.2s ease;
+  padding: 1rem;
 }
 
 footer {
@@ -908,4 +907,49 @@ footer .wrapper .legal-footer-container .legal .legal-list li a:hover {
   .how-it-works .carousel .carousel-inner .carousel-item .carousel-slide-text p {
     bottom: 30%;
   }
+}
+body {
+  background-color: #002a5c;
+}
+
+header {
+  height: 10vh;
+}
+header nav .header-nav {
+  position: relative;
+}
+
+.form-container {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-container h1 {
+  color: #ffc72c;
+  margin: 1rem;
+  font-size: 3rem;
+}
+.form-container .signup-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+}
+.form-container .signup-form .signup-button {
+  margin: 1rem 0;
+  width: 15%;
+  background-color: #ffc72c;
+  padding: 1rem 0;
+  border: none;
+  border-radius: 10px;
+}
+.form-container .signup-form #username, .form-container .signup-form #password {
+  margin: 1rem 0;
+  padding: 1rem;
+  width: 50%;
+  border-radius: 10px;
+  border: none;
 }

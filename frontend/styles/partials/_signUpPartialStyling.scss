@@ -1,0 +1,54 @@
+@use './variables' as *;
+
+body {
+    background-color: $deepBlue;
+}
+
+header {
+    height: 10vh;
+
+    nav .header-nav {
+        position: relative;
+    }
+}
+
+.form-container {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: $richGold;
+        margin: 1rem;
+        font-size: 3rem;
+    }
+
+    .signup-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        align-items: center;
+
+        .signup-button {
+            margin: 1rem 0;
+            width: 15%;
+            background-color: $richGold;
+            padding: 1rem 0;
+            border: none;
+            border-radius: 10px;
+        }
+        #username, #password {
+            margin: 1rem 0;
+            padding: 1rem;
+            width: 50%;
+            border-radius: 10px;
+            border: none;
+        }
+    }
+}
+
+
+

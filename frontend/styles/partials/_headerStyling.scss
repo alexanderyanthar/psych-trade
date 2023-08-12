@@ -1,11 +1,22 @@
 @use "./variables" as *;
 
 header {
+    position: relative;
+    height: 100vh;
+}
+
+.background-img-container {
+    position: absolute;
     background-image: url(../assets/viktor-forgacs-3PyBkxgTiL0-unsplash.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
+    width: 100vw;
+    z-index: -100;
+}
+
+header {
 
     .hamburger-menu-container {
         display: none;
