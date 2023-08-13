@@ -119,8 +119,6 @@ app.post('/submitAssessment', async (req, res) => {
         user.assessments.push(assessmentAnswers);
         await user.save();
 
-        console.log(req.user.assessments);
-
         res.redirect('/profile');
     } catch (err) {
         console.error('Error submitting assessment:', err);

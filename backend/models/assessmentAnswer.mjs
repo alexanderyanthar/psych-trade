@@ -6,11 +6,6 @@ const assessmentAnswerSchema = new mongoose.Schema({
         ref: 'User',
         required: true,
     },
-    assessment: {  // Add this field
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Assessment',
-        required: true,
-    },
     userPreference: {
         type: String,
         required: true,

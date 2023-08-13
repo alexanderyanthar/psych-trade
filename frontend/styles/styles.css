@@ -959,3 +959,22 @@ footer .wrapper .legal-footer-container .legal .legal-list li a:hover {
     width: 75%;
   }
 }
+.profile-page-container .wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile-page-container .wrapper .welcome-text {
+  text-align: center;
+}
+.profile-page-container .wrapper .logout-button {
+  margin: 1rem 0;
+  background-color: #ffc72c;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  align-self: flex-end;
+}

@@ -11,10 +11,6 @@ export const getProfile = async (req, res) => {
         const user = await User.findById(userId).populate({
             path: 'assessments',
             model: 'AssessmentAnswer',
-            populate: {
-                path: 'assessment',
-                model: 'Assessment'
-            }
         });
 
         const hasTakenAssessment = user.assessments.length > 0;

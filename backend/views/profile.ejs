@@ -4,19 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Roboto:wght@300;500&display=swap"
+        rel="stylesheet">
+    
+    <!-- font awesome icons -->
+    
+    <script src="https://kit.fontawesome.com/84bf206d2c.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
 <body>
-    <h1>Welcome! <%= username %>
-    </h1>
-    <a href="/logout">Logout</a>
-
-    <% if (!hasTakenAssessment) { %>
-        <a href="/assessment">Take Assessment!</a>
-    <% } else { %>
-        <p>Your Assessment Preference: <%= userPreference %></p>
-    <% } %>
-
+    <%- include ('header.ejs') %>
+    <main class="profile-page-container">
+        <div class="wrapper">
+            <h1 class="welcome-text">Welcome! <%= username %></h1>
+            
+            <% if (!hasTakenAssessment) { %>
+                <a href="/assessment">Take Assessment!</a>
+                <% } else { %>
+                    <% if (userPreference === 'fundamental') { %>
+                        <div class="analysis-container">
+                            <p>Your Preferred Analysis Type: <%= userPreference %>
+                            </p>
+                            <img src="./assets/analysis-type-fundamental.svg" alt="document read over avatar">
+                        </div>
+                    <% } else if (userPreference === 'technical') { %>
+                        <div class="analysis-container">
+                            <p>Your preferred Analysis Type: <%= userPreference %></p>
+                            <img src="./assets/analysis-type-technical.svg" alt="growth chart avatar">
+                        </div>
+                    <% } else if (userPreference === 'hybrid') { %>
+                        <div class="anaylsis-container">
+                            <p>Your preferred Analysis Type: <%= userPreference %></p>
+                            <img src="./assets/analysis-type-hybrid.svg" alt="data analysis avatar">
+                        </div>
+                    <% } %>
+                <% } %>
+            <a class="logout-button" href="/logout">Logout</a>
+        </div>
+    </main>
+    <%- include ('footer.ejs') %>
 </body>
 
 </html>
