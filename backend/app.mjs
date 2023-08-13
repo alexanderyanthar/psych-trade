@@ -41,7 +41,7 @@ app.use(cors());
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-app.use(express.static(__dirname + '/../frontend'));
+app.use(express.static(__dirname + './../frontend'));
 
 
 // Set the view engine to EJS

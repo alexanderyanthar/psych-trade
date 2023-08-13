@@ -45,33 +45,15 @@
             width: 50%;
         }
 
-        .contact-form {
-            width: 40%;
+        .call-to-action-buttons {
+            width: 50%;
+            justify-content: center;
         }
 
-        .call-to-action-form-container {
-            width: 100%;
-            flex-direction: column;
-
-            .password {
-                width: 100%;
-                margin: 0 0;
-                margin-bottom: 1rem;
-            }
-
-            .submit-btn {
-                width: 50%;
-                padding: 0.5rem;
-            }
-
-            .email {
-                width: 100%;
-                margin: 0 0;
-                margin-bottom: 1rem;
-            }
-
-
+        .call-to-action-buttons .call-to-action-btn:first-child {
+            margin-right: 1rem;
         }
+
     }
 
     // footer 
@@ -279,16 +261,8 @@
             padding: 1rem 0;
         }
 
-        .contact-form {
+        .call-to-action-buttons {
             width: 100%;
-        }
-
-        .call-to-action-form-container {
-            align-items: center;
-
-            .password {
-                margin-bottom: 2rem;
-            }
         }
     }
 

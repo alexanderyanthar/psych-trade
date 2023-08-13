@@ -1,23 +1,23 @@
 @use './variables' as *;
 
-body {
-    background-color: $deepBlue;
-}
-
-header {
+// Sign up page styling
+.signup-header {
     height: 10vh;
 
     nav .header-nav {
         position: relative;
+
     }
 }
 
 .form-container {
-    height: 60vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: $deepBlue;
+    padding: 1rem 0;
 
     h1 {
         color: $richGold;
@@ -25,14 +25,16 @@ header {
         font-size: 3rem;
     }
 
-    .signup-form {
+    .signup-form,
+    .login-form {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         width: 100%;
         align-items: center;
 
-        .signup-button {
+        .signup-button,
+        .login-button {
             margin: 1rem 0;
             width: 15%;
             background-color: $richGold;
@@ -46,6 +48,37 @@ header {
             width: 50%;
             border-radius: 10px;
             border: none;
+        }
+    }
+}
+
+// media queries for sign up page
+
+@media (max-width: $tablets) {
+    .form-container {
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .signup-form .signup-button,
+        .login-form .login-button {
+            width: 25%;
+        }
+    }
+}
+
+@media (max-width: $phones) {
+    .form-container {
+        .signup-form .signup-button,
+        .login-form .login-button {
+            width: 35%;
+        }
+
+        .signup-form #username,
+        .signup-form #password,
+        .login-form #username,
+        .login-form #password {
+            width: 75%;
         }
     }
 }
