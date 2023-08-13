@@ -43,6 +43,18 @@
                             <p>Your preferred Analysis Type: <%= userPreference %></p>
                             <img src="./assets/analysis-type-hybrid.svg" alt="data analysis avatar">
                         </div>
+                    <% } else if (userPreference === 'hybrid-fundamental') { %>
+                        <div class="anaylsis-container">
+                            <p>Your preferred Analysis Type: <%= userPreference %>
+                            </p>
+                            <img src="./assets/analysis-type-hybrid-fundamental-gold.svg" alt="hybrid fundamental avatar">
+                        </div>
+                    <% } else if (userPreference === 'hybrid-technical') { %>
+                        <div class="anaylsis-container">
+                            <p>Your preferred Analysis Type: <%= userPreference %>
+                            </p>
+                            <img src="./assets/analysis-type-hybrid-technical-yellow.svg" alt="hybrid technical avatar">
+                        </div>
                     <% } %>
                 <% } %>
             <a class="logout-button" href="/logout">Logout</a>

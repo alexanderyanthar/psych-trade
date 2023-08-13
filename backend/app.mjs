@@ -91,14 +91,12 @@ app.post('/submitAssessment', async (req, res) => {
             userPreference = 'fundamental';
         } else if (technicalPoints > fundamentalPoints && technicalPoints > hybridPoints) {
             userPreference = 'technical';
-        } else if (hybridPoints > fundamentalPoints && hybridPoints > technicalPoints) {
+        } else if (hybridPoints > fundamentalPoints && hybridPoints > technicalPoints || fundamentalPoints === technicalPoints) {
             userPreference = 'hybrid';
         } else if (fundamentalPoints === hybridPoints) {
-            userPreference = 'hybrid leaning toward fundamental';
-        } else if (fundamentalPoints === technicalPoints) {
-            userPreference = 'hybrid';
+            userPreference = 'hybrid-fundamental';
         } else if (technicalPoints === hybridPoints) {
-            userPreference = 'hybrid leaning towards technical';
+            userPreference = 'hybrid-technical';
         }
 
         // console.log(`User preference: ${userPreference}`);
