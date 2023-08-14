@@ -94,7 +94,7 @@ app.post('/submitAssessment', async (req, res) => {
         } else if (hybridPoints > fundamentalPoints && hybridPoints > technicalPoints || fundamentalPoints === technicalPoints) {
             userPreference = 'hybrid';
         } else if (fundamentalPoints === hybridPoints) {
-            userPreference = 'hybrid-fundamental';
+            userPreference = 'hybrid-fundamnetal';
         } else if (technicalPoints === hybridPoints) {
             userPreference = 'hybrid-technical';
         }
