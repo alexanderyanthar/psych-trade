@@ -64,6 +64,10 @@ document.getElementById('signup-Button').addEventListener('click', () => {
   window.location.href = 'http://psychtrade.eba-myjdbuuu.us-east-1.elasticbeanstalk.com/signup';
 })
 
+document.getElementById('signup-Button').addEventListener('click', () => {
+  window.location.href = 'http://localhost:8080/signup';
+})
+
 document.getElementById('login-btn').addEventListener('click', () => {
     window.location.href = 'http://psychtrade.eba-myjdbuuu.us-east-1.elasticbeanstalk.com/login';
 })
