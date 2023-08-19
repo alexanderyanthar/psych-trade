@@ -38,7 +38,7 @@ const logout = (req, res) => {
             return res.status(500).send('Error logging out');
         }
     });
-    res.redirect('http://127.0.0.1:5501/frontend/');
+    res.redirect('https://delicate-babka-930147.netlify.app/');
 };
 
 
