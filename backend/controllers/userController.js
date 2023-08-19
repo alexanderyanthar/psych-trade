@@ -1,11 +1,14 @@
-import bcrypt from 'bcrypt';
-import { User } from '../models/user.mjs'; // Import the User model
-import passport from 'passport';
+// import bcrypt from 'bcrypt';
+const bcrypt = require('bcrypt');
+// import { User } from '../models/user.mjs'; // Import the User model
+const User = require('../models/user');
+// import passport from 'passport';
+const passport = require('passport');
 
 // Controller function for user login
-export const login = passport.authenticate('local', { successRedirect: '/profile', failureRedirect: '/login', failureMessage: true });
+const login = passport.authenticate('local', { successRedirect: '/profile', failureRedirect: '/login', failureMessage: true });
 
-export const getProfile = async (req, res) => {
+const getProfile = async (req, res) => {
     try {
         const userId = req.user._id;
         const user = await User.findById(userId).populate({
@@ -28,7 +31,7 @@ export const getProfile = async (req, res) => {
 }
 
 // Controller function for user logout
-export const logout = (req, res) => {
+const logout = (req, res) => {
     req.logout((err) => {
         if(err) {
             console.error(err);
@@ -40,7 +43,7 @@ export const logout = (req, res) => {
 
 
 // Route handler for signing up
-export const signup = async (req, res) => {
+const signup = async (req, res) => {
     try {
         const { username, password } = req.body;
 
@@ -67,3 +70,4 @@ export const signup = async (req, res) => {
     }
 };
 
+module.exports = { login, getProfile, logout, signup };

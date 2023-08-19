@@ -1,7 +1,11 @@
-import passport from "passport";
-import { Strategy as LocalStrategy } from "passport-local";
-import bcrypt from 'bcrypt';
-import { User } from "../models/user.mjs";
+// import passport from "passport";
+const passport = require('passport');
+// import { Strategy as LocalStrategy } from "passport-local";
+const LocalStrategy = require('passport-local').Strategy;
+// import bcrypt from 'bcrypt';
+const bcrypt = require('bcrypt');
+// import { User } from "../models/user.mjs";
+const User = require('../models/user');
 
 const configurePassport = () => {
     // Passport configuration
@@ -33,4 +37,4 @@ const configurePassport = () => {
     });
 }
 
-export default configurePassport;
+module.exports = configurePassport;

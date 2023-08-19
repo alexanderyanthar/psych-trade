@@ -1,27 +1,44 @@
-import express from 'express';
-import cors from 'cors';
-import session from 'express-session';
-import passport from 'passport';
-import { Strategy as LocalStrategy } from 'passport-local';
-import bcrypt from 'bcrypt';
-import mongoose from 'mongoose';
-import crypto, { sign } from 'crypto';
-import ejs from 'ejs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { User } from './models/user.mjs';
-import { login, getProfile, logout, signup } from './controllers/userController.mjs';
-import userRoutes from './routes/userRoutes.mjs';
-import connectDB from './db.mjs';
-import configurePassport from './config/passportConfig.mjs';
-import { Question } from './models/assessment.mjs';
-import { AssessmentAnswer } from './models/assessmentAnswer.mjs';
+// import express from 'express';
+const express = require('express');
+// import cors from 'cors';
+const cors = require('cors');
+// import session from 'express-session';
+const session = require('express-session');
+// import passport from 'passport';
+const passport = require('passport');
+// import { Strategy as LocalStrategy } from 'passport-local';
+// import bcrypt from 'bcrypt';
+// import mongoose from 'mongoose';
+const mongoose = require('mongoose');
+// import crypto from 'crypto';
+const crypto = require('crypto');
+// import ejs from 'ejs';
+const ejs = require('ejs');
+// import path from 'path';
+const path = require('path');
+// import { fileURLToPath } from 'url';
+const { fileURLToPath } = require('url');
+// import { User } from './models/user.mjs';
+const User = require('./models/user');
+// import userRoutes from './routes/userRoutes.js';
+const userRoutes = require('./routes/userRoutes');
+// import connectDB from './db.mjs';
+// import configurePassport from './config/passportConfig.mjs';
+const configurePassport = require('./config/passportConfig');
+// import { Question } from './models/assessment.mjs';
+const { Question } = require('./models/assessment');
+// import { AssessmentAnswer } from './models/assessmentAnswer.js';
+const AssessmentAnswer = require('./models/assessmentAnswer');
 
 const app = express();
-const PORT = 3000;
+const PORT =  process.env.PORT || 3000;
 const secretKey = crypto.randomBytes(32).toString('hex');
 
-await mongoose.connect('mongodb://127.0.0.1:27017/PsychTradeDB');
+mongoose.connect('mongodb://127.0.0.1:27017/PsychTradeDB').then(() => {
+    console.log('Connected to MongoDB');
+}).catch((err) => {
+    console.error('Error connecting to MongoDB:', err);
+});
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -37,9 +54,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(cors());
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 app.use(express.static(__dirname + './../frontend'));
 

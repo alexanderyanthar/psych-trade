@@ -1,4 +1,5 @@
-import mongoose from "mongoose";
+// import mongoose from "mongoose";
+const mongoose = require('mongoose');
 
 const assessmentAnswerSchema = new mongoose.Schema({
     user: {
@@ -25,4 +26,4 @@ const assessmentAnswerSchema = new mongoose.Schema({
 
 const AssessmentAnswer = mongoose.model('AssessmentAnswer', assessmentAnswerSchema);
 
-export { AssessmentAnswer };
+module.exports = AssessmentAnswer;

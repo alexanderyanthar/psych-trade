@@ -1,4 +1,6 @@
-import mongoose, { Schema } from "mongoose";
+// import mongoose, { Schema } from "mongoose";
+const mongoose = require('mongoose');
+const Schema = require('mongoose');
 
 const answerSchema = new mongoose.Schema({
     question: { type: Schema.Types.ObjectId, ref: 'Question' },
@@ -32,4 +34,4 @@ const Question = mongoose.model('Question', questionSchema);
 const Answer = mongoose.model('Answer', answerSchema);
 const Assessment = mongoose.model('Assessment', assessmentSchema);
 
-export {Assessment, Question, Answer}
+module.exports = { Question, Answer, Assessment };

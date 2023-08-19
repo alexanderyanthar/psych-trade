@@ -1,5 +1,7 @@
-import express from 'express';
-import { signup, login, logout, getProfile } from '../controllers/userController.mjs';
+// import express from 'express';
+const express = require('express');
+// import { signup, login, logout, getProfile } from '../controllers/userController.mjs';
+const { signup, login, logout, getProfile } = require('../controllers/userController.js');
 
 const router = express.Router();
 
@@ -21,4 +23,4 @@ router.post('/signup', signup);
 
 router.get('/profile', getProfile);
 
-export default router;
+module.exports = router;
