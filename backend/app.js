@@ -32,7 +32,7 @@ const AssessmentAnswer = require('./models/assessmentAnswer');
 require('dotenv').config();
 
 const app = express();
-const PORT =  process.env.PORT || 8080;
+const port =  process.env.PORT || 3000;
 const secretKey = crypto.randomBytes(32).toString('hex');
 
 mongoose.connect(process.env.MONGODB_URI, {
@@ -151,6 +151,6 @@ app.post('/submitAssessment', async (req, res) => {
     }
 });
 
-app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server listening on port ${PORT}`);
+app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
 });
