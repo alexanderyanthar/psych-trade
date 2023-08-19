@@ -1,5 +1,8 @@
-import mongoose from "mongoose";
-import { Assessment, Question, Answer } from "./models/assessment.mjs";
+// import mongoose from "mongoose";
+const mongoose = require('mongoose');
+// import { Assessment, Question, Answer } from "./models/assessment.mjs";
+const { Assessment, Question, Answer } = require('./models/assessment');
+require('dotenv').config();
 
 const questions = [
     {
@@ -131,7 +134,14 @@ const saveAssessmentQuestionsAndAnswers = async () => {
 
 
 const populateDatabase = async () => {
-    await mongoose.connect('mongodb://127.0.0.1:27017/PsychTradeDB');
+    mongoose.connect(process.env.MONGODB_URI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    }).then(() => {
+        console.log('Connected to MongoDB');
+    }).catch((err) => {
+        console.error('Error connecting to MongoDB:', err);
+    });
 
     await saveAssessmentQuestionsAndAnswers();
 

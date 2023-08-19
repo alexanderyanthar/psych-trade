@@ -29,12 +29,16 @@ const configurePassport = require('./config/passportConfig');
 const { Question } = require('./models/assessment');
 // import { AssessmentAnswer } from './models/assessmentAnswer.js';
 const AssessmentAnswer = require('./models/assessmentAnswer');
+require('dotenv').config();
 
 const app = express();
 const PORT =  process.env.PORT || 3000;
 const secretKey = crypto.randomBytes(32).toString('hex');
 
-mongoose.connect('mongodb://127.0.0.1:27017/PsychTradeDB').then(() => {
+mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+}).then(() => {
     console.log('Connected to MongoDB');
 }).catch((err) => {
     console.error('Error connecting to MongoDB:', err);
