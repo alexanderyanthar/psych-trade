@@ -1,6 +1,4 @@
-// import express from 'express';
 const express = require('express');
-// import cors from 'cors';
 const cors = require('cors');
 // import session from 'express-session';
 const session = require('express-session');
@@ -57,16 +55,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-const allowedOrigins = ['https://delicate-babka-930147.netlify.app'];
-app.use(cors({
-    origin: (origin, callback) => {
-        if (allowedOrigins.includes(origin) || !origin) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    }
-}));
+app.use(cors());
 
 app.use(express.static(__dirname + './../frontend'));
 

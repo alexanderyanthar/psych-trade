@@ -1,5 +1,5 @@
 // import bcrypt from 'bcrypt';
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 // import { User } from '../models/user.mjs'; // Import the User model
 const User = require('../models/user');
 // import passport from 'passport';
